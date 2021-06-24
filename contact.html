@@ -16,99 +16,16 @@
 </head>
 
 <body class="">
-
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo" style="background: none !important;"><i class="material-icons"
-            style="font-size: 3.5rem;">contact_support</i><strong>Asist Acces</strong></a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <div class="helperItem helperItem__fonts">
-              <span class="helperItem__font-min tooltipped" id="min_font" onclick="decreseFontSize()"
-                data-position="bottom" data-tooltip="Mai mic">A</span>
-              <span class="helperItem__font-mid tooltipped" id="mid_font" onclick="setDefaultSize()"
-                data-position="bottom" data-tooltip="Mijlociu">A</span>
-              <span class="helperItem__font-max tooltipped" id="max_font" onclick="increseFontSize()"
-                data-position="bottom" data-tooltip="Mai mare">A</span>
-            </div>
-          </li>
-          <li><a><i class="material-icons"
-                onclick="helper_DisabilitySet(this.id, 'invert_mode_on', 'invert_colors', 'invert_colors_off')"
-                id="invert_colors">invert_colors</i></a></li>
-          <!--    background: radial-gradient(black, transparent);-->
-          <li><a><i class="material-icons"
-                onclick="helper_DisabilitySet(this.id, 'day_state', 'blur_circular', 'blur_off')"
-                id="day_state">blur_circular</i></a></li>
-          <li><a onclick="helper_highlightStr('highlight_text')"><i class="material-icons">format_underlined</i></a>
-          </li>
-          <li><a onclick="helper_SelectToAudio()"><i class="material-icons" id="sound-helper">volume_up</i></a></li>
-          <li><a data-target="nav-mobile" onclick="$('#quick-menu').modal('open');"><i class="material-icons">explore</i></a></li>
-          <li><a data-target="nav-mobile" onclick="removeDisSets()"><i class="material-icons">restart_alt</i></a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="sidenav">
-          <li>
-            <a href="sass.html"><i class="material-icons">test</i></a>
-            <a href="badges.html"><i class="material-icons">view_module</i></a>
-            <a href="badges.html"><i class="material-icons">view_module</i></a>
-            <a href="badges.html"><i class="material-icons">view_module</i></a>
-          </li>
-          <li><a href=""><i class="material-icons">refresh</i></a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-  </div>
-  <!--principal nav-->
-  <!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">Despre noi</a></li>
-    <li><a href="#!">Parteneri</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">IMSP de Poliție</a></li>
-    <li><a href="#!">Parajurist</a></li>
-    <li><a href="#!">Avocatul poporului</a></li>
-  </ul>
-  <nav style="background-color: #1f1d1d;">
-    <div class="nav-wrapper container">
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Acasa</a></li>
-        <li><a href="badges.html">Juridic</a></li>
-        <li><a href="badges.html">Sanatate</a></li>
-        <li><a href="contact.html">Contacteaza-ne</a></li>
-
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Despre<i
-              class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-    </div>
-  </nav>
-
+  <div data-include="navbar"></div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h3 class="header left orange-text">Spune salut!(doar cand e activat modul pt aia)</h3>
+      <h3 class="header left orange-text">Spune salut!</h3>
       <br><br><br><br><br>
       <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
         <a id="menu" class="btn btn-floating btn-large cyan" onclick="$('.tap-target').tapTarget('open')">
           <i class="material-icons">menu</i>
         </a>
-
-        <div class="tap-target" data-target="menu">
-          <div class="tap-target-content">
-            
-            <div>
-              <p class="close-asistent no-select">-</p>
-              <p class="more-asistent no-select">...</p>
-              <video class="scale2" playsinline="" autoplay="autoplay" muted="muted" width="220px" style="border-style: double;"
-              poster="https://cdn.signly.co/images/transparent-poster.png"
-              src="https://signlymediaservice-ukso1.streaming.media.azure.net/ed0c9b84-bd04-4046-86b7-1dd12aa5d918/5ee846ad2d0e7c0057581d4f_1594212_608x1080_AACAudio_1618.mp4"
-              class="playing">
-            </video>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -133,50 +50,12 @@
     </div>
     <br><br>
   </div>
-<!-- Modal quick-menu -->
-<div id="quick-menu" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <hr>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Despre noi</h5>
-          <p class="grey-text text-lighten-4">Acest site are ca scop informarea gratuită şi ajutorul acestora de a face legătura cu organele competente problemei utilizatorului. Ca scop ne propunem să ajutăm şi persoanele cu necesităţi speciale, pentru a le respecta drepturile şi pentru a le oferi un mod mai uşor de a interacţiona cu platforma <em>Info Acces</em>.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Navigare</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Contact</a></li>
-            <li><a class="white-text" href="#!">Linia fierbinte</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Link-uri utile</h5>
-          <ul>
-            <li><a class="white-text" href="#!">IMSP de Politie</a></li>
-            <li><a class="white-text" href="#!">Judecatorie</a></li>
-            <li><a class="white-text" href="#!">Parajurist</a></li>
-            <li><a class="white-text" href="#!">Avocatul poporului</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Toate drepturile rezervate de catre <strong><em>HackJustice 2021</em></strong>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer -->
+  <div data-include="footer"></div>
+  <!-- Modals -->
+  <div data-include="modals"></div>
+  <!-- Asistent -->
+  <div data-include="asistent"></div>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>

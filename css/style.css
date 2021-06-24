@@ -13,3 +13,36 @@
 .no-select {
   user-select: none;
 }
+
+.container-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+.container-info div {
+  background-color: #ff8a8a;
+  aspect-ratio: 1;
+}
+.container-info p {
+  text-align: center;
+  padding: 2px;
+}
+.box-title {
+  background: white none repeat scroll 0 0;
+  display: inline-block;
+  padding: 0 2px;
+  margin-left: 8em;
+}
+
+.text-box{
+  border:2px solid black !important;
+}
+.text-box-title{
+  text-align: center;
+    font-size: 1rem !important;
+    width: 30px !important;
+    margin-top: -10px !important;
+    margin-left: 5px !important;
+    background: white !important;
+    border-style: inherit;
+}
