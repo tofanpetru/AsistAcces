@@ -9,7 +9,7 @@
         <div>
           <p class="close-asistent no-select" style="color: currentColor;">-</p>
           <p class="more-asistent no-select" style="color: currentColor;">...</p>
-          <video class="scale2 asistent-video" id="myvideo" playsinline="" autoplay="autoplay" muted="muted" width="220px" style="border-style: groove;"
+          <video class="scale2 asistent-video" id="asistent-p" playsinline="" autoplay="autoplay" muted="muted" width="220px" style="border-style: groove;"
           poster="media/all/final-img-asistent.png"
           src="media/videos/bun-venit-pe-asist-acces.mp4"
           class="playing">
@@ -24,9 +24,15 @@
     $('.tap-target').tapTarget();
     $('#quick-menu').modal();
 
-    $('#quick-menu').modal('open');
-    $('.tap-target').tapTarget('open')
+    if(document.cookie.indexOf('modal-menu-open') == -1){
+        $('#quick-menu').modal('open');
+        $('.tap-target').tapTarget('open');
 
+        speekResponse("Bun venit pe Asist Acces!, pentru a dezactiva meniul ajutător, tastaţi 0 sau închideţi fereastra. Va aflaţi pe pagina: " + curentPageName + ", pentru a o accesa, tastati 7. Pentru a accesa pagina cu informaţii juridice tastaţi 1. Pentru a accesa pagina cu informaţii Despre noi tastaţi 2. Pentru a lua legătura cu un consultant tastaţi 3. Pentru ne contacta tastaţi 4. Pentru a merge la pagina principala tastaţi 5, pentru a merge la pagina anterioara tastaţi 6, pentru a accesa pagina curenta tastaţi 7. Adu-mi aminte pe ce pagină ma aflu.");
+        
+    
+      }
+    
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown();
   </script>
