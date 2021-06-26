@@ -1,6 +1,8 @@
 <div id="quick-menu" class="modal">
     <div class="modal-content">
+        <a class="right btn btn-small" onclick="$('#quick-menu').modal('close');"><strong>[0]</strong> Nu am nevoie de această funcţionalitate</a>
         <h4>Meniu de navigare</h4>
+        
         <hr>
         <p>Bun venit pe <strong>AsistAcces!</strong> <br>Suntem aici pentru a va ghida spre informatii utile.</p>
         <div class="container-info">
@@ -30,14 +32,31 @@
                     <p><strong>Contacteaza-ne</strong></p>
                 </div>
             </div>
+            <div>
+                <div class="text-box">
+                    <h1 class="text-box-title">5</h1>
+                    <p><strong>Pagina principala</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="text-box">
+                    <h1 class="text-box-title">6</h1>
+                    <p><strong>Pagina anterioara</strong></p>
+                </div>
+            </div>
+            <div>
+                <div class="text-box">
+                    <h1 class="text-box-title">7</h1>
+                    <p><strong>Acceseaza pagina curenta</strong></p>
+                </div>
+            </div>
         </div>
         <br>
         <ul class="collapsible">
             <li class="active">
                 <div class="collapsible-header"><i class="material-icons">keyboard</i>Utilizarea tastaturii pentru
                     navigare</div>
-                <div class="collapsible-body"><span>Navigarea cu ajutorul tastaturii se va face prin<i
-                            class="material-icons">switch_right</i> sau prin accesarea după
+                <div class="collapsible-body"><span>Navigarea speciala se va efectua după
                         numerele ca de exemplu:</span>
                     <span class="text-box-title" style="
             border-style: solid;
@@ -53,3 +72,17 @@
         <a href="#!" class="modal-close waves-effect waves-green btn-small">Continuaţi</a>
     </div>
 </div>
+<script>
+
+$("#quick-menu").keypress(function(event) {
+    if (event.keyCode == 97 || event.keyCode == 49) {
+        location.replace("http://127.0.0.1:5501/AsistAcces/domains.html");
+    }else if (event.keyCode == 100 || event.keyCode == 52) {
+        location.replace("http://127.0.0.1:5501/AsistAcces/contact.html");
+   }else if (event.keyCode == 101 || event.keyCode == 53) {
+    location.replace("http://127.0.0.1:5501/AsistAcces/index.html");
+    }else if (event.keyCode == 102 || event.keyCode == 54) {
+        history.back();
+    }
+})
+</script>

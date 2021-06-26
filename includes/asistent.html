@@ -1,5 +1,5 @@
 <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
-    <a id="menu" class="btn btn-floating btn-large cyan" onclick="$('.tap-target').tapTarget('open')">
+    <a id="menu" class="btn btn-floating btn-large cyan"  style="padding: 0 !important;" onclick="$('.tap-target').tapTarget('open')">
       <i class="material-icons">menu</i>
     </a>
 
@@ -23,6 +23,10 @@
       $('.sidenav').sidenav();
     $('.tap-target').tapTarget();
     $('#quick-menu').modal();
+
+    $('#quick-menu').modal('open');
+    $('.tap-target').tapTarget('open')
+
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown();
   </script>

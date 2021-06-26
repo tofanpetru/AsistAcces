@@ -13,6 +13,7 @@ function helper_SelectToAudio()
         document.getElementById('sound-helper').textContent = "volume_up";
     }
 }
+
 function helper_DisabilitySet(clicked_id, disabilityClass, disabilityImgOn, disabilityImgOff)
 {
     if (!document.body.className.match(disabilityClass)) {
@@ -48,7 +49,9 @@ function removeDisSets()
     document.getElementById("invert_colors").textContent = "invert_colors";
 
     document.getElementById("sound-helper").textContent = "volume_up";
+    document.getElementById("web_asset").textContent = "web_asset";
     setDefaultSize();  
+    signAsistentRemoveHelper();
     M.toast({html: 'Resetat cu succes!'})
 }
 function removeAllClassesWhoContain(className) {
