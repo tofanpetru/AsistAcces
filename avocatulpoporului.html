@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px;" id="html">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  
+  <title>Asist acces | Avocatul poporului</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/signasistent.css" type="text/css" rel="stylesheet" />
+  <link href="css/disabilites.css" type="text/css" rel="stylesheet" />
+  <link href="css/specialnavigation.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div data-include="navbar"></div>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br> <!--Data tooltip pt fiecare definitie grea -->
+      <h3 class="header center orange-text">Aici poţi să trimiţi o petiţie către Către Avocaul poporului</h3>
+      <br>
+      <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
+        <a id="menu" class="btn btn-floating btn-large cyan" onclick="$('.tap-target').tapTarget('open')">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="domainsCtrl">
+    <div class="section">
+        <div class="row" style="border-style: solid; padding: 5px; padding-bottom: 10px;">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <i class="material-icons prefix" style="right: -4px;">keyboard_voice</i>
+                  <label for="icon_prefix">Numele Prenumele</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate" pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|
+                  2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|
+                  4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$" value="+373">
+                  <label for="icon_telephone">Telefon</label>
+                  <i class="material-icons prefix" style="right: -4px;">keyboard_voice</i>
+                  <span class="helper-text" data-error="Format gresit" data-success="✔️">* Câmp obligatoriu</span>
+                </div>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate emailv" onkeypress="return AvoidSpace(event);" onblur="this.value=removeSpaces(this.value);">
+                  <label for="email">Email</label>
+                  <i class="material-icons prefix" style="right: -4px;" id="email-btn" title="Start">keyboard_voice</i>
+                  <span class="helper-text" data-error="Format gresit"" data-success="✔️">* Câmp obligatoriu</span>
+                </div>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">edit</i>
+                <textarea id="textbox" class="materialize-textarea input"></textarea>
+                <label for="textbox">Mesajul dumneavoastra</label>
+                <i class="material-icons prefix" style="right: -11.5px;" id="textarea-btn" title="Start">keyboard_voice</i>
+              </div>
+              <div class="col s10 offset-s1 center-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    Submit
+                    <i class="material-icons prefix">send</i>
+                </button>
+            </div>
+            </form>
+          </div>
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">keyboard_voice</i>Completarea formei cu inregistrare vocala</div>
+              <div class="collapsible-body"><span>Pentru a putea completa formele cu ajutorul inregistrarii vocale, va rugam sa activati cu ajutorul butonului <i class="material-icons">keyboard_voice</i>.</span></div>
+            </li>
+          </ul>
+    </div>
+    <br><br>
+  </div>
+  <!-- Footer -->
+  <div data-include="footer"></div>
+  <!-- Modals -->
+  <div data-include="modals"></div>
+  <!-- Asistent -->
+  <div data-include="asistent"></div>
+  <!--  Scripts-->
+  <script>
+    var curentPageName = "Consiliului Naţional pentru Asistenţă Juridică Garantată de Stat";
+  </script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/disabilites.js"></script>
+<script src="js/autospeech.js"></script>
+<script src="js/signasistent.js"></script>
+<script src="js/mediascript.js"></script>
+<script src="js/init.js"></script>
+<script src="js/cookies.js"></script>
+
+<script src="js/voicerecognition2.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/naviboard@3.0.0/dist/naviboard.min.js"></script> 
+</body>
+
+</html>
