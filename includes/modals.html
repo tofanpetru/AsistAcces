@@ -70,7 +70,7 @@
             border-style: solid;
             text-align: center;
             padding: 0.5px;
-        ">1</span>. Pentru a deschide meniul de navigare se va tasta c "9"
+        ">1</span>. Pentru a deschide meniul de navigare se va tasta: "9"
                 </div>
             </li>
         </ul>
@@ -82,16 +82,17 @@
 </div>
 
 <script>
-    if(document.cookie.indexOf('modal-menu-open') == 12){
-            document.querySelector("#deactivate-menu").textContent = "[0] Nu am nevoie de această funcţionalitate";
-            document.querySelector("#deactivate-menu").classList.add("red");
-        }else if(document.cookie.indexOf('modal-menu-open') == -1){
+    if(document.cookie.indexOf('modal-menu-open') != -1){
             document.querySelector("#deactivate-menu").textContent = "[0] Am nevoie de această funcţionalitate";
+            document.querySelector("#deactivate-menu").classList.add("red");
+        }else{
+            document.querySelector("#deactivate-menu").textContent = "[0] Nu am nevoie de această funcţionalitate";
             document.querySelector("#deactivate-menu").classList.add("blue");
             
         }
 </script>
 <script>
+naviBoard.setNavigation("domainsCtrl");
 
 $("#quick-menu").keypress(function(event) {
     if (event.keyCode == 97 || event.keyCode == 49) {

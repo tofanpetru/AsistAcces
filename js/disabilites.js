@@ -90,3 +90,14 @@ function textToSpeech(text) {
     utterance.text = text;
     synthesis.speak(utterance);
 }
+
+function AvoidSpace(event) {
+    var k = event ? event.which : window.event.keyCode;
+    if (k == 32) return false;
+}
+
+/* Remove Blank Space Automatically Before, After & middle of String */
+
+function removeSpaces(string) {
+ return string.split(' ').join('');
+}

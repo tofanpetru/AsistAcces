@@ -3,14 +3,14 @@ $(document).on("click", ".close-asistent", function(){
 });
 
 function signAsistentAddHelper() {
-    var els = document.querySelectorAll("p, h5, h1, span, spec, h3");
+    var els = document.querySelectorAll("p, h5, h1, span, spec, h3, hello");
     for(var i = 0, all = els.length; i < all; i++){   
          els[i].classList.add('signly-text-segment', 'play');
      }
 }
 function signAsistentRemoveHelper() {
     if(!document.body.classList.contains("signly-text-segment")) {
-        var els = document.querySelectorAll("p, h5, h1, span, spec, h3");
+        var els = document.querySelectorAll("p, h5, h1, span, spec, h3, hello");
         for(var i = 0, all = els.length; i < all; i++){   
             els[i].classList.remove('signly-text-segment', 'play');
         }
@@ -46,7 +46,7 @@ function getAllElementAttribute() {
     });
 }
 
-$(document).on("click", "p, h5, h1, span, h3, spec", function(){
+$(document).on("click", "p, h5, h1, span, h3, spec, hello", function(){
     var srcVideo = $(this).attr("sign-play") //cu index va fi in viitor
     if(srcVideo && document.getElementById('web_asset').textContent.match("web_asset_off") != null){
         $('.tap-target').tapTarget("open");

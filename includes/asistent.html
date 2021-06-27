@@ -23,12 +23,13 @@
       $('.sidenav').sidenav();
     $('.tap-target').tapTarget();
     $('#quick-menu').modal();
+    $('select').not('.disabled').formSelect(); //in browser cand preyinti
 
     if(document.cookie.indexOf('modal-menu-open') == -1){
         $('#quick-menu').modal('open');
         $('.tap-target').tapTarget('open');
 
-        speekResponse("Bun venit pe Asist Acces!, pentru a dezactiva meniul ajutător, tastaţi 0 sau închideţi fereastra. Va aflaţi pe pagina: " + curentPageName + ", pentru a o accesa, tastati 7. Pentru a accesa pagina cu informaţii juridice tastaţi 1. Pentru a accesa pagina cu informaţii Despre noi tastaţi 2. Pentru a lua legătura cu un consultant tastaţi 3. Pentru ne contacta tastaţi 4. Pentru a merge la pagina principala tastaţi 5, pentru a merge la pagina anterioara tastaţi 6, pentru a accesa pagina curenta tastaţi 7. Adu-mi aminte pe ce pagină ma aflu.");
+        speekResponse("Bun venit pe Asist Acces!, pentru a dezactiva meniul ajutător, tastaţi 0 sau închideţi fereastra. Va aflaţi pe pagina: " + curentPageName + ", pentru a o accesa, tastaţi     7. Pentru a accesa pagina cu informaţii juridice tastaţi 1. Pentru a accesa pagina cu informaţii Despre noi tastaţi 2. Pentru a lua legătura cu un consultant tastaţi 3. Pentru ne contacta tastaţi 4. Pentru a merge la pagina principala tastaţi 5, pentru a merge la pagina anterioara tastaţi 6, pentru a accesa pagina curenta tastaţi 7. Adu-mi aminte pe ce pagină ma aflu.");
         
     
       }

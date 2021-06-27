@@ -34,56 +34,52 @@
 
   <div class="container" id="domainsCtrl">
     <div class="section">
-        <div class="row" style="border-style: solid;">
-            <p>Aici puteţi să ne expuneţi problema dumneavoastra:</p>
+        <div class="row" style="border-style: solid; padding: 5px; padding-bottom: 10px;">
             <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
-                  </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <i class="material-icons prefix" style="right: -4px;">keyboard_voice</i>
+                  <label for="icon_prefix">Numele Prenumele</label>
                 </div>
-              </form>
-
-    
-              <div class="input-field col s12">
-                <div class="input-field col s12 m6">
-                    <select class="icons">
-                      <option value="" disabled selected></option>
-                      <option value="" data-icon="media/dataicon/phone.png">Telefon</option>
-                      <option value="" data-icon="media/dataicon/email.png">Email</option>
-                      <option value="" data-icon="media/dataicon/sms.png">Sms</option>
-                    </select>
-                    <label>Selecteaza modalitatea de a ne expune problema</label>
-                  </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate" pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|
+                  2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|
+                  4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$" value="+373">
+                  <label for="icon_telephone">Telefon</label>
+                  <i class="material-icons prefix" style="right: -4px;">keyboard_voice</i>
+                  <span class="helper-text" data-error="Format gresit" data-success="✔️">* Câmp obligatoriu</span>
+                </div>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate emailv" onkeypress="return AvoidSpace(event);" onblur="this.value=removeSpaces(this.value);">
+                  <label for="email">Email</label>
+                  <i class="material-icons prefix" style="right: -4px;" id="email-btn" title="Start">keyboard_voice</i>
+                  <span class="helper-text" data-error="Format gresit"" data-success="✔️">* Câmp obligatoriu</span>
+                </div>
               </div>
-            
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Mesajul dumneavoastra</label>
-                  </div>
-                </div>
-              </form>
-              <form action="#">
-                <div class="file-field input-field">
-                  <div class="btn">
-                    <span>Fisier</span>
-                    <input type="file" multiple>
-                  </div>
-                  <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Incarca unul sau mai multe fisiere">
-                  </div>
-                </div>
-              </form>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">edit</i>
+                <textarea id="textbox" class="materialize-textarea input"></textarea>
+                <label for="textbox">Mesajul dumneavoastra</label>
+                <i class="material-icons prefix" style="right: -11.5px;" id="textarea-btn" title="Start">keyboard_voice</i>
+              </div>
+              <div class="col s10 offset-s1 center-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    Submit
+                    <i class="material-icons prefix">send</i>
+                </button>
+            </div>
+            </form>
           </div>
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">keyboard_voice</i>Completarea formei cu inregistrare vocala</div>
+              <div class="collapsible-body"><span>Pentru a putea completa formele cu ajutorul inregistrarii vocale, va rugam sa activati cu ajutorul butonului <i class="material-icons">keyboard_voice</i>.</span></div>
+            </li>
+          </ul>
     </div>
     <br><br>
   </div>
@@ -91,11 +87,11 @@
   <div data-include="footer"></div>
   <!-- Modals -->
   <div data-include="modals"></div>
-  <!-- Asistent 
-  <div data-include="asistent"></div>-->
+  <!-- Asistent -->
+  <div data-include="asistent"></div>
   <!--  Scripts-->
   <script>
-    var curentPageName = "informare";
+    var curentPageName = "Consiliului Naţional pentru Asistenţă Juridică Garantată de Stat";
   </script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
@@ -105,6 +101,10 @@
 <script src="js/mediascript.js"></script>
 <script src="js/init.js"></script>
 <script src="js/cookies.js"></script>
+<script src="js/voicerecognition.js"></script>
+<script src="js/voicerecognition2.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/naviboard@3.0.0/dist/naviboard.min.js"></script> 
 </body>
 
 </html>

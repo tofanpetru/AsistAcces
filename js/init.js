@@ -7,6 +7,7 @@
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown();
     $('select').formSelect();
+    
   }); // end of document ready
   $(function () {
   var includes = $('[data-include]')
